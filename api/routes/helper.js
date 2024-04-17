@@ -12,7 +12,7 @@ const credentials = {
     CONF: "123456",
 };
 
-const makeHttpRequest = async ({ path, method = "GET", data = {} }) => {
+const makeHttpRequest = async ({ path, method, data = {} }) => {
     const { HOST, KEY, PASS, PORT } = credentials;
 
     const url = `https://${HOST}:${PORT}/index.php?${path}&adminapikey=${KEY}&adminapipass=${PASS}&api=json`;
@@ -48,10 +48,10 @@ const makeHttpRequest = async ({ path, method = "GET", data = {} }) => {
 };
 
 // Example function to list all VPS
-const fetcher = ({ path, data }) => {
+const fetcher = ({ path, data, method }) => {
     return makeHttpRequest({
         path: path,
-        method: "GET",
+        method: method || "GET",
         data,
     });
 };
