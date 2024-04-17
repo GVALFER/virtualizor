@@ -2,7 +2,7 @@ const axios = require("axios");
 const https = require("https");
 
 const credentials = {
-    HOST: "185.225.112.14",
+    HOST: "192.168.1.100",
     KEY: "JGSLKsXVWlwcGBh7inFLgVr9lO3hfP50uX",
     PASS: "kAIxf2eNE1OpkCOaMdsEbMiiLWaqFdKKTP",
     PORT: "4085",
