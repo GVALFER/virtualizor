@@ -47,7 +47,6 @@ const makeHttpRequest = async ({ path, method, data = {} }) => {
     }
 };
 
-// Example function to list all VPS
 const fetcher = ({ path, data, method }) => {
     return makeHttpRequest({
         path: path,
